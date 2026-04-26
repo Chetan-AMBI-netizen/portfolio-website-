@@ -1,0 +1,110 @@
+body{
+    background-color: rgb(27, 29, 50);
+    color: aliceblue
+}
+
+header{
+    background-color: rgb(62, 61, 61);
+    color: white;
+    font-size: larger;
+    padding: 20px;
+    margin: auto;
+    opacity: 10px;
+    transform: rotateX(45deg);
+
+   
+
+
+}
+h2,p{
+    text-align: center;
+    font-weight: 900;
+    transform: rotateX(45deg);
+
+}
+u{
+    color: rgba(226, 200, 8, 0.164);
+}
+a[href ^= "#"]{
+    color: rgb(236, 16, 16);   
+}
+.resumer{
+   padding: 10px 10px;
+   background: burlywood;
+   cursor: pointer;
+   margin-top: 20px;
+   transition: 0.4s;
+
+}
+.resumer:hover{
+    background-color:rgba(211, 119, 26, 0.842);
+    transform: rotate3d(360deg);
+    box-shadow:0 0 5px black ;
+
+   
+}
+
+.navbar{
+    display: block;
+    justify-content: space-between;
+    color: rgb(255, 254, 252);
+    padding: 20px;
+    text-align: right;
+    color: bisque;
+    transition: 0.2s;
+
+}
+.navbar:hover{
+    color: cyan;
+}
+.mainer:hover{
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: 0 0 15px  yellow;
+    
+    
+    background-color: rgba(222, 184, 135, 0.066);
+    animation: slide 3s  ease-in infinite ;
+
+}
+.projector{
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
+    
+}
+.project{
+    width:200px;
+    height: 200px;
+    padding:20px;
+    background: rgb(62, 61, 61);
+    border-radius: 20%;
+    transition: 1s;
+}
+.project:hover{
+    box-shadow: 0 0 10px black;
+    transform:  scale(0.9) ;
+    
+}
+
+
+
+
+
+@keyframes slide{
+    from{
+        border-bottom: 0%;
+        bottom: 0%;
+        box-shadow: 0 0 10px rgba(236, 78, 16, 0.824);
+
+    }
+    to{
+        border-bottom: 40px;
+        box-shadow: darkgoldenrod;
+    }
+    
+
+}
