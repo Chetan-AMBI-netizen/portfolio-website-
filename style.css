@@ -89,6 +89,28 @@ a[href ^= "#"]{
     transform:  scale(0.9) ;
     
 }
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+#continueBtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#continueBtn:disabled {
+  background-color: #cccccc;
+  cursor:  not-allowed;
+  text-align: center;
+}
+
 
 
 

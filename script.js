@@ -1,4 +1,11 @@
 
+function toggleButton() {
+  const checkbox = document.getElementById('terms');
+  const button = document.getElementById('continueBtn');
+  
+  // Enable the button only if the checkbox is checked
+  button.disabled = !checkbox.checked;
+}
 
 (function () {
 

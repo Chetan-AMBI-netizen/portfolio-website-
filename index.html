@@ -60,7 +60,38 @@
                
 
 
-            </section>
+            </section><br><br>
+
+         <form>
+        <p>
+        <label for = "Name"> Name*</label><br>
+        <input type = "text" id = "Name" name = "name" placeholder = "Enter your name" required><br>
+        </p>
+
+        <p>
+        <label for = "E-mail"> E-mail*</label><br>
+        <input type = "email" id = "email" name = "email" placeholder ="Enter a valid email"required><br>
+        </p>
+         <p id="commentForm">
+  
+         <label for="comments">Your Comment:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Type your comment here..."></textarea>
+  
+        <br><br>
+
+
+        <div class="terms-container">
+        <input type="checkbox" id="terms" name="terms"   onchange="toggleButton()"  placeholder="type your comment here...." required>
+    
+        <label for="terms">I agree to the <a href="terms.html">Terms and Conditions</a></label>
+         </div>
+
+        <br>
+        <button type="submit" id="continueBtn" disabled>Continue</button>
+
+        
+
+         </form>   
         </main><br><br><br>
         
 <footer> 
