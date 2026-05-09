@@ -1,84 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio website</title>
-    <link rel = "stylesheet" href = "style.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHETAN-IT STUDENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"> />
 </head>
+
 <body>
-    <script src = "script.js"></script>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="#home" class="navbar__logo" aria-label="Go to top">
+          CHETAN-IT STUDENT <span class="navbar__logo-dot"></span>
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="chetan-about.html" class="navbar__link">About</a></li> 
+          <li><a href="#skills" class="navbar__link">Skills</a></li>
+          <li><a href="https://github.com/Chetan-AMBI-netizen" class="navbar__link">Projects</a></li>
     
-    <header><h1><center>Welcome to <u>My portfolio</u></center></h1>
-         <marquee class = "marhqueer"> TECH STACKS:- |Frontend-Developer|.|python| |numpy| |pandas|.|HTML5|.|CSS3|.|javascript| |react.js| |node.js|. | Hard-Coder||Vibe-Coder|. |Generative AI| |Web-Developer|</marquee><br>
-        <h3> <b><i>by Chetan Ambiger</i></b></h3><br>
-        [Frontend Developer]
-    <nav class = "navbar">
-        <a href = "index.html"> Home</a> |
-        <a href = "chetan-about.html"> About_me</a> |
-        <a href = "https://github.com/Chetan-AMBI-netizen"> Projects</a> |
-        <a href = "mailto:chetanambigerchetan@gmail.com"> Contact</a>|
-        <a href = "https://www.linkedin.com/in/chetan-ambi-9b1a4b1b3/"> |LinkedIn</a> |
-         
-    </nav> 
-           </header>
-    <center><a href = "MY_RESUMECV.pdf" download="my_resume" >
-    <button type = "button" class = "resumer"> Download Resume</button><br><br><br><br>
-   </a></center>
-        <main class = "mainer">
-            <aside class = "asider">
-                <h2>
-                    QUOTES<em> About me</em></h2>
-                  <P>  i) "Every great website was once just a blank code editor—success comes one line at a time."<br>
-                    ii) "If your code works on first try, there is a massive mistake somewhere."
+          <li><a href="#chetanambigerchetan@gmail.com" class="navbar__link">Contact</a></li>
+        </ul>
 
-            </aside>
+        <a href="#contact" class="navbar__cta">Get In Touch</a>
 
-            <section  id = "projects"class = "sectioner">
-                <h2> Projects</h2>
-                <div class = "projector">
-                <div class = project> 
-                    <h3 id = "proj"> Project 1<br><br>
-                          AI Chatbot</h3>
-                    <p> Click Below link to view about project👇 </p>
-                    <a href = "https://github.com/chetanambi-collab/openai-chatbot...git"> learn more</a>
-                </div>
-                <div class = "project">
-                    <h3> Project 2<br><br>
-                         CareFLOW-AI</h3>
-                    <p>Click Below link to view about project👇 </p>
-                    <a href = "https://github.com/Epoch26/AI-128-GAME-IS-ON"> Learn more</a>
-                </div>
-                <div class = "project">
-                    <h3> Project 3<br><br>
-                         Number Guessing game</h3>
-                    <p>Click Below link to view about project👇</p>
-                    <a href = "https://github.com/chetanambi-collab/number-guessing-game"> Learn more</a>
-                </div>
-                </div>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="navbar__mobile" id="mobileMenu" role="menu">
+      <a href="chetan-about.html" class="navbar__link" role="menuitem">About</a>
+      <a href="chetan-about.html" class="navbar__link" role="menuitem">Skills</a>
+      <a href="https://github.com/Chetan-AMBI-netizen" class="navbar__link" role="menuitem">Projects</a>
+      <a href="https://www.linkedin.com/in/chetan-ambiger" class="navbar__link" role="menuitem">Linkedin</a>
+      <a href="#chetanambigerchetan@gmail.com" class="navbar__link" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero section" id="home" aria-label="Hero">
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Available for internships &amp;  Open-Source contribution, opportunities
+        </div>
+
+        <h1 class="hero__name">
+        CHETAN<br>
+          <span class="hero__name-accent">AMBIGER</span>
+        </h1>
+
+        <p class="hero__role">// Frontend Developer</p>
+
+        <p class="hero__desc">
+          Computer Science student at vemana institute of technology, passionate about building elegant, scalable systems.
+          I craft end-to-end web experiences.
+        </p>
+
+        <div class="hero__actions">
+          <a href="https://github.com/Chetan-AMBI-netizen" class="btn btn--primary">
+            <span>View My Work</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#contact" class="btn btn--outline">
+            <span>Say Hello</span>
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__num">4+</div>
+            <div class="stat__label">Projects Built</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">1</div>
+            <div class="stat__label">Years Coding</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">5</div>
+            <div class="stat__label">Technologies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section about" id="about" aria-label="About me">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrap reveal">
+          <div class="about__image-container" role="img" aria-label="Alex Chen's photo">
+            <div class="about__avatar" aria-hidden="true">CSE</div>
+          </div>
+          <div class="about__image-border" aria-hidden="true"></div>
+          <div class="about__tag-wrap" aria-hidden="true">
+            <div class="about__tag-num">8.7</div>
+            <div class="about__tag-text">SGPA in  1st Semester </div>
+          </div>
+        </div>
+
+        <div class="about__body">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Turning ideas into<br>digital experiences</h2>
+          <div class="section-divider" aria-hidden="true"></div>
+
+          <p>
+            I'm a <strong>1st year Computer Science student at VEMANA INSTITUTE OF TECHNOLOGY BANGALORE</strong> with a deep love for
+            software that's both functional and beautiful. I believe great engineering is invisible — it just works.
+          </p>
+          <p>
+            My experience spans the Frontend: building React frontends that delight users, designing
+            RESTful APIs that developers love, and deploying cloud infrastructure that scales. I'm particularly
+            drawn to the intersection of <strong>performance, design, and developer experience</strong>.
+          </p>
+          <p>
+            When I'm not coding, you'll find me contributing to open source, writing technical articles,
+            or exploring the Bangalore hills.
+          </p>
+
+          <div class="about__highlights reveal reveal-delay-2">
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">🎓</span>
+              VEMANA INSTITUTE OF TECHNOLOGY, CSE
             </div>
-            <section class="contact-section">
-    <h2>Get In Touch</h2>
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">📍</span>
+              Bangalore, KA
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">💼</span>
+              Open to Work
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">🚀</span>
+              Frontend WEB Developer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message..." rows="3" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-</section>
-        </main>
-                
+  <!-- ─── SKILLS ─── -->
+  <section class="section" id="skills" aria-label="Skills">
+    <div class="container">
+      <span class="section-label reveal">Technical Skills</span>
+      <h2 class="section-title reveal">Tools of the Trade</h2>
+      <p class="section-desc reveal">
+        Technologies I use to  solve technical challenges that scale and perform.
+      </p>
+
+      <div class="skills__grid">
+        <article class="skill-category reveal reveal-delay-1">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">🖥️</div>
+            <div>
+              <div class="skill-category__name">Frontend</div>
+              <div class="skill-category__sub">UI & Interfaces</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <!-- <span class="skill-tag">Redux</span> -->
+          </div>
+        </article>
+
+       <!--<article class="skill-category reveal reveal-delay-2">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">⚙️</div>
+            <div>
+              <div class="skill-category__name">Backend</div>
+              <div class="skill-category__sub">APIs & Services</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">Node.js</span>
+            <span class="skill-tag skill-tag--accent">Python</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">REST</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="skill-category reveal reveal-delay-3">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">☁️</div>
+            <div>
+              <div class="skill-category__name">Cloud & DevOps</div>
+              <div class="skill-category__sub">Infrastructure</div>
+            </div>
+          </div>-->
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">AWS</span>
+            <span class="skill-tag">Docker</span>
+           <!-- <span class="skill-tag">Kubernetes</span>-->
+            <!-- <span class="skill-tag">CI/CD</span> -->
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Vercel</span>
+          </div>
+        </article>
+
+        <article class="skill-category reveal reveal-delay-4">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">🗄️</div>
+            <div>
+              <div class="skill-category__name">Data & AI</div>
+              <div class="skill-category__sub">ML & Databases</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">MongoDB</span>
             
-<footer> 
-    <marquee class = "marhqueer"> TECH STACKS:- |Frontend-Developer|.|python| |numpy| |pandas|.|HTML5|.|CSS3|.|javascript| |react.js| |node.js|. | Hard-Coder||Vibe-Coder|. |Generative AI| |Web-Developer|</marquee><br>
-     <p>&copy 2026 Chetan Ambiger</p>
-</footer> 
-<script> 
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+          </div>
+        </article>
 
-</script>
+        <article class="skill-category reveal reveal-delay-5">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">🔧</div>
+            <div>
+              <div class="skill-category__name">Tools & Practices</div>
+              <div class="skill-category__sub">Workflow</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">Git</span>
+            <span class="skill-tag">windows</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </article>
 
-</script>
+        <article class="skill-category reveal reveal-delay-1">
+          <div class="skill-category__header">
+            <div class="skill-category__icon" aria-hidden="true">📐</div>
+            <div>
+              <div class="skill-category__name">Languages</div>
+              <div class="skill-category__sub">Core proficiency</div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--accent">JavaScript</span>
+            <span class="skill-tag skill-tag--accent">Python</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Javascript</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section projects" id="projects" aria-label="Projects">
+    <div class="container">
+      <span class="section-label reveal">Selected Work</span>
+      <h2 class="section-title reveal">Things I've Built</h2>
+      <p class="section-desc reveal">
+        A selection of projects I'm proud of — from hackathon builds to real-world applications.
+      </p>
+
+      <div class="projects__grid">
+        <article class="project-card reveal reveal-delay-1">
+          <div class="project-card__image project-card__image--1" role="img" aria-label="DevFlow project preview">
+            <div class="project-card__image-inner" aria-hidden="true">🌊</div>
+            <span class="project-card__badge">Full-Stack</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">CARE FLOW-AI — Healthcare Workflow Automation</h3>
+            <p class="project-card__desc">
+              A real-time collaborative project management tool built for engineering teams.
+              Features drag-and-drop boards, GitHub integration, and advanced analytics dashboards.
+            </p>
+            <div class="project-card__stack">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Javascript</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">Firebase</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="project-link project-link--accent" aria-label="Live demo of DevFlow">
+                ↗ Live Demo
+              </a>
+              <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="project-link" aria-label="GitHub repo for DevFlow">
+                ⌥ GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!--<article class="project-card reveal reveal-delay-2">
+          <div class="project-card__image project-card__image--2" role="img" aria-label="NeuralNotes project preview">
+            <div class="project-card__image-inner" aria-hidden="true">🧠</div>
+            <span class="project-card__badge project-card__badge--teal">AI / ML</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">NeuralNotes — AI Study Assistant</h3>
+            <p class="project-card__desc">
+              An intelligent note-taking app that uses NLP to auto-summarize lecture transcripts,
+              generate flashcards, and identify knowledge gaps with spaced-repetition scheduling.
+            </p>
+            <div class="project-card__stack">
+              <span class="stack-tag">Next.js</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">OpenAI</span>
+              <span class="stack-tag">MongoDB</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-link project-link--accent" aria-label="Live demo of NeuralNotes">
+                ↗ Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="GitHub repo for NeuralNotes">
+                ⌥ GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-3">
+          <div class="project-card__image project-card__image--3" role="img" aria-label="Verdant project preview">
+            <div class="project-card__image-inner" aria-hidden="true">🌿</div>
+            <span class="project-card__badge">Mobile</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Verdant — Carbon Footprint Tracker</h3>
+            <p class="project-card__desc">
+              A mobile-first web app that helps users track, visualize, and reduce their carbon
+              footprint. Integrates with financial APIs to automatically categorize spending habits.
+            </p>
+            <div class="project-card__stack">
+              <span class="stack-tag">React Native</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">GraphQL</span>
+              <span class="stack-tag">Plaid API</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-link project-link--accent" aria-label="Live demo of Verdant">
+                ↗ Live Demo
+              </a>
+              <a href="#" class="project-link" aria-label="GitHub repo for Verdant">
+                ⌥ GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="section" id="experience" aria-label="Work experience">
+    <div class="container">
+      <span class="section-label reveal">Career</span>
+      <h2 class="section-title reveal">Experience</h2>
+      <p class="section-desc reveal">
+        Where I've worked and what I've built along the way.
+      </p>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-item__dot" aria-hidden="true">💼</div>
+          <div class="timeline-item__card">
+            <div class="timeline-item__meta">
+              <div>
+                <div class="timeline-item__title">Student Web Developer-FREELANCER</div>
+                <div class="timeline-item__company">  TECHN-GLOBAL, BANGALORE</div>
+              </div>
+              <span class="timeline-item__period">january 2026 -- march 2026</span>
+            </div>
+            <p class="timeline-item__desc">
+              Developed and maintained responsive websites for local businesses, improving load times by 30% through code optimization and image compression. Collaborated with clients to implement custom features using React and Tailwind CSS, resulting in a 25% increase in user engagement.
+            </p>
+            <div class="timeline-item__tags">
+              <span class="timeline-tag">React</span>
+             <span class="timeline-tag">Tailwind CSS</span>
+              <span class="timeline-tag">JavaScript</span>
+              <span class="timeline-tag">Responsive Design</span>
+              <span class="timeline-tag">Freelancing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1" role="listitem">
+          <div class="timeline-item__dot" aria-hidden="true">🎓</div>
+          <div class="timeline-item__card">
+            <div class="timeline-item__meta">
+              <div>
+                <div class="timeline-item__title">Undergraduate  IT Student</div>
+                <div class="timeline-item__company"> VEMANA INSTITUTE OF TECHNOLOGY</div>
+              </div>
+              <span class="timeline-item__period"></span>
+            </div>
+            <p class="timeline-item__desc">
+              Pursuing a Bachelor of Technology in Computer Science and Engineering.
+               Relevant coursework includes Data Structures, Algorithms, Operating Systems, and Database Management.
+                Actively involved in coding clubs and hackathons, honing problem-solving skills and collaborating on projects that apply theoretical concepts to real-world challenges.
+            </p>
+            <div class="timeline-item__tags">
+              <span class="timeline-tag">Workshop Attending</span>
+              <span class="timeline-tag">Open-Source contribution</span>
+              <span class="timeline-tag">Full Stack Development</span>
+              <span class="timeline-tag">Problem Solving</span>
+              <span class="timeline-tag">Research</span>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2" role="listitem">
+          <div class="timeline-item__dot" aria-hidden="true">🚀</div>
+          <div class="timeline-item__card">
+            <div class="timeline-item__meta">
+              <div>
+                <div class="timeline-item__title">Team-Lead entrepreneur</div>
+                <div class="timeline-item__company">VEXON.in-remote</div>
+              </div>
+              <span class="timeline-item__period">July 2025 --</span>
+            </div>
+            <p class="timeline-item__desc">The Team Lead is central to this model, responsible for mentoring, motivating, and developing a team of distributors or entrepreneurs.<br>
+               The role involves not just managing performance but also providing training and support to help team members succeed in their entrepreneurial journey.
+              
+            </p>
+            <div class="timeline-item__tags">
+              <span class="timeline-tag">Leadership</span>
+              <span class="timeline-tag">Mentorship</span>
+              <span class="timeline-tag">Remote Work</span>
+              <span class="timeline-tag">Entrepreneurship</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section contact" id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="contact__layout">
+        <div>
+          <span class="section-label reveal">Let's Talk</span>
+          <h2 class="contact__info-title reveal">
+            Have an idea?<br>
+            <span>Let's build it.</span>
+          </h2>
+          <p class="contact__info-desc reveal">
+            I'm actively looking for Summer 2026 internship opportunities & full-time positions and Open Source contributions.
+            Whether you have a role in mind, want to collaborate, or just want to connect — my inbox is open.
+          </p>
+
+          <div class="contact__links reveal reveal-delay-1">
+            <a href="mailto:chetanambigerchetan@gmail.com" class="contact-link" aria-label="Send email">
+              <span class="contact-link__icon" aria-hidden="true">✉️</span>
+              chetanambigerchetan@gmail.com
+              <span class="contact-link__label">EMAIL</span>
+            </a>
+            <a href="https://linkedin.com/in/chetanambiger" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <span class="contact-link__icon" aria-hidden="true">💼</span>
+              linkedin.com/in/chetanambiger
+              <span class="contact-link__label">LINKEDIN</span>
+            </a>
+            <a href="https://github.com/Chetan-AMBI-netizen" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <span class="contact-link__icon" aria-hidden="true">⌥</span>
+              github.com/Chetan-AMBI-netizen
+              <span class="contact-link__label">GITHUB</span>
+            </a>
+            <a href="MY_RESUMECV.pdf" class="contact-link" aria-label="Download resume">
+              <span class="contact-link__icon" aria-hidden="true">📄</span>
+              Download Resume
+              <span class="contact-link__label">PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__form reveal reveal-delay-2">
+          <form id="contactForm" novalidate aria-label="Contact form">
+            <div class="form__row">
+              <div class="form__group" id="group-name">
+                <label class="form__label" for="name">Name</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+                <div class="form__error-msg" role="alert">Please enter your name</div>
+              </div>
+              <div class="form__group" id="group-email">
+                <label class="form__label" for="email">Email</label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+                <div class="form__error-msg" role="alert">Please enter a valid email</div>
+              </div>
+            </div>
+
+            <div class="form__group" id="group-subject">
+              <label class="form__label" for="subject">Subject</label>
+              <input
+                class="form__input"
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What's this about?"
+                required
+                aria-required="true"
+              />
+              <div class="form__error-msg" role="alert">Please enter a subject</div>
+            </div>
+
+            <div class="form__group" id="group-message">
+              <label class="form__label" for="message">Message</label>
+              <textarea
+                class="form__textarea"
+                id="message"
+                name="message"
+                placeholder="Tell me about your project, idea, or opportunity..."
+                required
+                aria-required="true"
+              ></textarea>
+              <div class="form__error-msg" role="alert">Please write a message (min. 20 characters)</div>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+              <span class="form__submit-text">Send Message ↗</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+            
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">
+          Designed &amp; Built by <span>Chetan Ambiger</span> · © 2026
+        </p>
+        <nav aria-label="Social links">
+          <div class="footer__socials">
+            <a href="https://github.com/Chetan-AMBI-netizen" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <span aria-hidden="true">⌥</span>
+            </a>
+            <a href="https://linkedin.com/in/chetanambiger" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <span aria-hidden="true">💼</span>
+            </a>
+            <a href="mailto:chetanambigerchetan@gmail.com" class="social-btn" aria-label="Email">
+              <span aria-hidden="true">✉️</span>
+            </a>
+            <a href="https://instagram.com/ll_ambi_____ll" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <span aria-hidden="true">📸</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─────────────────────────────────────────
+       JAVASCRIPT
+  ───────────────────────────────────────── -->
+  <script >
+    /* ── Navbar scroll state ── */
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.navbar__link');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      /* Scrolled style */
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+
+      /* Active link highlighting */
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    }, { passive: true });
+
+    /* ── Mobile menu ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = mobileMenu.querySelectorAll('.navbar__link');
+
+    hamburger.addEventListener('click', () => {
+      const open = !hamburger.classList.contains('open');
+      hamburger.classList.toggle('open', open);
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* Close menu on outside click */
+    document.addEventListener('click', e => {
+      if (!navbar.contains(e.target)) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* ── Intersection Observer — reveal animations ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ── Form validation ── */
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function validateField(field, groupId, condition) {
+      const group = document.getElementById(groupId);
+      if (condition) {
+        field.classList.remove('error');
+        field.classList.add('valid');
+        group.classList.remove('has-error');
+        return true;
+      } else {
+        field.classList.add('error');
+        field.classList.remove('valid');
+        group.classList.add('has-error');
+        return false;
+      }
+    }
+
+    /* Live validation on blur */
+    document.getElementById('name').addEventListener('blur', function() {
+      validateField(this, 'group-name', this.value.trim().length >= 2);
+    });
+
+    document.getElementById('email').addEventListener('blur', function() {
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      validateField(this, 'group-email', emailRe.test(this.value.trim()));
+    });
+
+    document.getElementById('subject').addEventListener('blur', function() {
+      validateField(this, 'group-subject', this.value.trim().length >= 3);
+    });
+
+    document.getElementById('message').addEventListener('blur', function() {
+      validateField(this, 'group-message', this.value.trim().length >= 20);
+    });
+
+    /* Submit */
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById('name');
+      const email   = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      const valid = [
+        validateField(name,    'group-name',    name.value.trim().length >= 2),
+        validateField(email,   'group-email',   emailRe.test(email.value.trim())),
+        validateField(subject, 'group-subject', subject.value.trim().length >= 3),
+        validateField(message, 'group-message', message.value.trim().length >= 20),
+      ].every(Boolean);
+
+      if (!valid) return;
+
+      /* Simulate send */
+      submitBtn.disabled = true;
+      submitBtn.classList.add('sent');
+
+      setTimeout(() => {
+        form.reset();
+        [name, email, subject, message].forEach(f => f.classList.remove('valid', 'error'));
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('sent');
+      }, 3500);
+    });
+
+    /* ── Smooth scroll polyfill for older Safari ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
