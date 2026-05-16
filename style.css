@@ -1217,6 +1217,56 @@
     .form__submit.sent .form__submit-text { opacity: 0; }
     .form__submit.sent::after { opacity: 1; }
     .form__submit.sent { background: #22c55e; box-shadow: 0 4px 20px rgba(34,197,94,0.4); }
+     .marquee {
+    /* Ensure the marquee has a dark or contrasting background for the 3D effect to pop */
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    animation: scroll-left 20s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee__text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #510503;
+    padding-right: 50px; /* Spacing between duplicates */
+    text-transform: uppercase;
+  }
+
+  /* Pause on hover for accessibility */
+  .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move by half the total width (one set of content) */
+    }
+  }  
+
+  
 
     /* ─────────────────────────────────────────
        FOOTER
@@ -1350,5 +1400,12 @@
       .hero__stats { flex-wrap: wrap; gap: var(--sp-6); }
       .projects__grid { grid-template-columns: 1fr; }
       .skills__grid { grid-template-columns: 1fr; }
-      
-    }
+      .marquee {
+  /* Container settings */
+  width: 100%;
+  overflow: hidden; /* Hides the text as it scrolls out */
+  white-space: nowrap; /* Keeps text on one line */
+  background-color: #f0f0f0; /* Optional: background color */
+  padding: 10px 0;
+}
+ 
