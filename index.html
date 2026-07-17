@@ -1,755 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHETAN-IT STUDENT</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css"> />
-</head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chetan Ambiger  — CSE STUDENT& Founder</title>
+<meta name="description" content="Portfolio of Chetan Ambiger, Frontend Developer, Future Engineer and Startup Founder building intelligent systems that ship." />
 
-<body>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- ─── NAVBAR ─── -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <div class="navbar__inner">
-        <a href="#home" class="navbar__logo" aria-label="Go to top">
-          CHETAN-IT STUDENT <span class="navbar__logo-dot"></span>
-          
-        </a>
-
-        <ul class="navbar__links" role="list">
-          <li><a href="chetan-about.html" class="navbar__link">About</a></li> 
-          <li><a href="https://leetcode.com/u/chetan-ambiger/" class="navbar__link">Leetcode</a></li>
-          <li><a href="https://github.com/Chetan-AMBI-netizen" class="navbar__link">Projects</a></li>
-    
-          <li><a href="mailto:chetanambigerchetan@gmail.com" class="navbar__link">Contact</a></li>
-        </ul>
-
-        <a href="#contact" class="navbar__cta">Get In Touch</a>
-
-        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile nav -->
-    <div class="navbar__mobile" id="mobileMenu" role="menu">
-      <a href="chetan-about.html" class="navbar__link" role="menuitem">About</a>
-      <a href="https://leetcode.com/u/chetan-ambiger/" class="navbar__link" role="menuitem">Leetcode</a>
-      <a href="https://github.com/Chetan-AMBI-netizen" class="navbar__link" role="menuitem">Projects</a>
-      <a href="https://linkedin.com/in/chetan-ambiger-b6ba42380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="navbar__link" role="menuitem">Linkedin</a>
-      <a href="mailto:chetanambigerchetan@gmail.com" class="navbar__link" role="menuitem">Contact</a>
-    </div>
-  </nav>
-
-  <!-- ─── HERO ─── -->
-  <section class="hero section" id="home" aria-label="Hero">
-    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-
-    <div class="container">
-      <div class="hero__content">
-        <div class="hero__badge">
-          <span class="hero__badge-dot" aria-hidden="true"></span>
-          Available for internships &amp;  Open-Source contribution, opportunities
-        </div>
-
-        <h1 class="hero__name">
-        CHETAN<br>
-          <span class="hero__name-accent">AMBIGER</span>
-        </h1>
-
-        <p class="hero__role">// Frontend Developer</p>
-        <marquee behavior="scroll" direction="left" scrollamount="3" class="marquee" aria-hidden="true">
-    <span class="marquee__text"> ||HTML5 |CSS3 |JavaScript| | react.js|Python|NUMPY|PANDAS|Vibe Coder| Generative AI|| </span>
-  </marquee>
-  </section>
-
-        <p class="hero__desc">
-          Computer Science student at vemana institute of technology, passionate about building elegant, scalable systems.
-          I craft end-to-end web experiences.
-        </p>
-
-        <div class="hero__actions">
-          <a href="https://github.com/Chetan-AMBI-netizen" class="btn btn--primary">
-            <span>View My Work</span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a href="#contact" class="btn btn--outline">
-            <span>Say Hello</span>
-          </a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="stat">
-            <div class="stat__num">4+</div>
-            <div class="stat__label">Projects Built</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">1</div>
-            <div class="stat__label">Years Coding</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">5</div>
-            <div class="stat__label">Technologies</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero__scroll" aria-hidden="true">
-      <div class="hero__scroll-line"></div>
-      <span>scroll</span>
-    </div>
-  </section>
-
-  <!-- ─── ABOUT ─── -->
-  <section class="section about" id="about" aria-label="About me">
-    <div class="container">
-      <div class="about__grid">
-        <div class="about__image-wrap reveal">
-          <div class="about__image-container" role="img" aria-label="Alex Chen's photo">
-            <div class="about__avatar" aria-hidden="true">CSE</div>
-          </div>
-          <div class="about__image-border" aria-hidden="true"></div>
-          <div class="about__tag-wrap" aria-hidden="true">
-            <div class="about__tag-num">8.7</div>
-            <div class="about__tag-text">SGPA in  1st Semester </div>
-          </div>
-        </div>
-
-        <div class="about__body">
-          <span class="section-label">About Me</span>
-          <h2 class="section-title">Turning ideas into<br>digital experiences</h2>
-          <div class="section-divider" aria-hidden="true"></div>
-
-          <p>
-            I'm a <strong>1st year Computer Science student at VEMANA INSTITUTE OF TECHNOLOGY BANGALORE</strong> with a deep love for
-            software that's both functional and beautiful. I believe great engineering is invisible — it just works.
-          </p>
-          <p>
-            My experience spans the Frontend: building React frontends that delight users, designing
-            RESTful APIs that developers love, and deploying cloud infrastructure that scales. I'm particularly
-            drawn to the intersection of <strong>performance, design, and developer experience</strong>.
-          </p>
-          <p>
-            When I'm not coding, you'll find me contributing to open source, writing technical articles,
-            or exploring the Bangalore hills.
-          </p>
-
-          <div class="about__highlights reveal reveal-delay-2">
-            <div class="highlight-item">
-              <span class="highlight-icon" aria-hidden="true">🎓</span>
-              VEMANA INSTITUTE OF TECHNOLOGY, CSE
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon" aria-hidden="true">📍</span>
-              Bangalore, KA
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon" aria-hidden="true">💼</span>
-              Open to Work
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon" aria-hidden="true">🚀</span>
-              Frontend WEB Developer
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── SKILLS ─── -->
-  <section class="section" id="skills" aria-label="Skills">
-    <div class="container">
-      <span class="section-label reveal">Technical Skills</span>
-      <h2 class="section-title reveal">Tools of the Trade</h2>
-      <p class="section-desc reveal">
-        Technologies I use to  solve technical challenges that scale and perform.
-      </p>
-
-      <div class="skills__grid">
-        <article class="skill-category reveal reveal-delay-1">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">🖥️</div>
-            <div>
-              <div class="skill-category__name">Frontend</div>
-              <div class="skill-category__sub">UI & Interfaces</div>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <!-- <span class="skill-tag">Redux</span> -->
-          </div>
-        </article>
-
-       <!--<article class="skill-category reveal reveal-delay-2">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">⚙️</div>
-            <div>
-              <div class="skill-category__name">Backend</div>
-              <div class="skill-category__sub">APIs & Services</div>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">Node.js</span>
-            <span class="skill-tag skill-tag--accent">Python</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">REST</span>
-            <span class="skill-tag">PostgreSQL</span>
-          </div>
-        </article>
-
-        <article class="skill-category reveal reveal-delay-3">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">☁️</div>
-            <div>
-              <div class="skill-category__name">Cloud & DevOps</div>
-              <div class="skill-category__sub">Infrastructure</div>
-            </div>
-          </div>-->
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">AWS</span>
-            <span class="skill-tag">Docker</span>
-           <!-- <span class="skill-tag">Kubernetes</span>-->
-            <!-- <span class="skill-tag">CI/CD</span> -->
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">Vercel</span>
-          </div>
-        </article>
-
-        <article class="skill-category reveal reveal-delay-4">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">🗄️</div>
-            <div>
-              <div class="skill-category__name">Data & AI</div>
-              <div class="skill-category__sub">ML & Databases</div>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">MongoDB</span>
-            
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">NumPy</span>
-          </div>
-        </article>
-
-        <article class="skill-category reveal reveal-delay-5">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">🔧</div>
-            <div>
-              <div class="skill-category__name">Tools & Practices</div>
-              <div class="skill-category__sub">Workflow</div>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">Git</span>
-            <span class="skill-tag">windows</span>
-            <span class="skill-tag">VS Code</span>
-          </div>
-        </article>
-
-        <article class="skill-category reveal reveal-delay-1">
-          <div class="skill-category__header">
-            <div class="skill-category__icon" aria-hidden="true">📐</div>
-            <div>
-              <div class="skill-category__name">Languages</div>
-              <div class="skill-category__sub">Core proficiency</div>
-            </div>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--accent">JavaScript</span>
-            <span class="skill-tag skill-tag--accent">Python</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Javascript</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PROJECTS ─── -->
-  <section class="section projects" id="projects" aria-label="Projects">
-    <div class="container">
-      <span class="section-label reveal">Selected Work</span>
-      <h2 class="section-title reveal">Things I've Built</h2>
-      <p class="section-desc reveal">
-        A selection of projects I'm proud of — from hackathon builds to real-world applications.
-      </p>
-
-      <div class="projects__grid">
-        <article class="project-card reveal reveal-delay-1">
-          <div class="project-card__image project-card__image--1" role="img" aria-label="DevFlow project preview">
-            <div class="project-card__image-inner" aria-hidden="true">🌊</div>
-            <span class="project-card__badge">Full-Stack</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">CARE FLOW-AI — Healthcare Workflow Automation</h3>
-            <p class="project-card__desc">
-              A real-time collaborative project management tool built for engineering teams.
-              Features drag-and-drop boards, GitHub integration, and advanced analytics dashboards.
-            </p>
-            <div class="project-card__stack">
-              <span class="stack-tag">React</span>
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">Javascript</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">Firebase</span>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="project-link project-link--accent" aria-label="Live demo of DevFlow">
-                ↗ Live Demo
-              </a>
-              <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="project-link" aria-label="GitHub repo for DevFlow">
-                ⌥ GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!--<article class="project-card reveal reveal-delay-2">
-          <div class="project-card__image project-card__image--2" role="img" aria-label="NeuralNotes project preview">
-            <div class="project-card__image-inner" aria-hidden="true">🧠</div>
-            <span class="project-card__badge project-card__badge--teal">AI / ML</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">NeuralNotes — AI Study Assistant</h3>
-            <p class="project-card__desc">
-              An intelligent note-taking app that uses NLP to auto-summarize lecture transcripts,
-              generate flashcards, and identify knowledge gaps with spaced-repetition scheduling.
-            </p>
-            <div class="project-card__stack">
-              <span class="stack-tag">Next.js</span>
-              <span class="stack-tag">Python</span>
-              <span class="stack-tag">FastAPI</span>
-              <span class="stack-tag">OpenAI</span>
-              <span class="stack-tag">MongoDB</span>
-            </div>
-            <div class="project-card__links">
-              <a href="#" class="project-link project-link--accent" aria-label="Live demo of NeuralNotes">
-                ↗ Live Demo
-              </a>
-              <a href="#" class="project-link" aria-label="GitHub repo for NeuralNotes">
-                ⌥ GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card reveal reveal-delay-3">
-          <div class="project-card__image project-card__image--3" role="img" aria-label="Verdant project preview">
-            <div class="project-card__image-inner" aria-hidden="true">🌿</div>
-            <span class="project-card__badge">Mobile</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Verdant — Carbon Footprint Tracker</h3>
-            <p class="project-card__desc">
-              A mobile-first web app that helps users track, visualize, and reduce their carbon
-              footprint. Integrates with financial APIs to automatically categorize spending habits.
-            </p>
-            <div class="project-card__stack">
-              <span class="stack-tag">React Native</span>
-              <span class="stack-tag">TypeScript</span>
-              <span class="stack-tag">GraphQL</span>
-              <span class="stack-tag">Plaid API</span>
-            </div>
-            <div class="project-card__links">
-              <a href="#" class="project-link project-link--accent" aria-label="Live demo of Verdant">
-                ↗ Live Demo
-              </a>
-              <a href="#" class="project-link" aria-label="GitHub repo for Verdant">
-                ⌥ GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- ─── EXPERIENCE ─── -->
-  <section class="section" id="experience" aria-label="Work experience">
-    <div class="container">
-      <span class="section-label reveal">Career</span>
-      <h2 class="section-title reveal">Experience</h2>
-      <p class="section-desc reveal">
-        Where I've worked and what I've built along the way.
-      </p>
-
-      <div class="timeline" role="list">
-
-        <div class="timeline-item reveal" role="listitem">
-          <div class="timeline-item__dot" aria-hidden="true">💼</div>
-          <div class="timeline-item__card">
-            <div class="timeline-item__meta">
-              <div>
-                <div class="timeline-item__title">Student Web Developer-FREELANCER</div>
-                <div class="timeline-item__company">  TECHN-GLOBAL, BANGALORE</div>
-              </div>
-              <span class="timeline-item__period">january 2026 -- march 2026</span>
-            </div>
-            <p class="timeline-item__desc">
-              Developed and maintained responsive websites for local businesses, improving load times by 30% through code optimization and image compression. Collaborated with clients to implement custom features using React and Tailwind CSS, resulting in a 25% increase in user engagement.
-            </p>
-            <div class="timeline-item__tags">
-              <span class="timeline-tag">React</span>
-             <span class="timeline-tag">Tailwind CSS</span>
-              <span class="timeline-tag">JavaScript</span>
-              <span class="timeline-tag">Responsive Design</span>
-              <span class="timeline-tag">Freelancing</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal reveal-delay-1" role="listitem">
-          <div class="timeline-item__dot" aria-hidden="true">🎓</div>
-          <div class="timeline-item__card">
-            <div class="timeline-item__meta">
-              <div>
-                <div class="timeline-item__title">Undergraduate  IT Student</div>
-                <div class="timeline-item__company"> VEMANA INSTITUTE OF TECHNOLOGY</div>
-              </div>
-              <span class="timeline-item__period"></span>
-            </div>
-            <p class="timeline-item__desc">
-              Pursuing a Bachelor of Technology in Computer Science and Engineering.
-               Relevant coursework includes Data Structures, Algorithms, Operating Systems, and Database Management.
-                Actively involved in coding clubs and hackathons, honing problem-solving skills and collaborating on projects that apply theoretical concepts to real-world challenges.
-            </p>
-            <div class="timeline-item__tags">
-              <span class="timeline-tag">Workshop Attending</span>
-              <span class="timeline-tag">Open-Source contribution</span>
-              <span class="timeline-tag">Full Stack Development</span>
-              <span class="timeline-tag">Problem Solving</span>
-              <span class="timeline-tag">Research</span>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal reveal-delay-2" role="listitem">
-          <div class="timeline-item__dot" aria-hidden="true">🚀</div>
-          <div class="timeline-item__card">
-            <div class="timeline-item__meta">
-              <div>
-                <div class="timeline-item__title">Team-Lead entrepreneur</div>
-                <div class="timeline-item__company">VEXON.in-remote</div>
-              </div>
-              <span class="timeline-item__period">July 2025 --</span>
-            </div>
-            <p class="timeline-item__desc">The Team Lead is central to this model, responsible for mentoring, motivating, and developing a team of distributors or entrepreneurs.<br>
-               The role involves not just managing performance but also providing training and support to help team members succeed in their entrepreneurial journey.
-              
-            </p>
-            <div class="timeline-item__tags">
-              <span class="timeline-tag">Leadership</span>
-              <span class="timeline-tag">Mentorship</span>
-              <span class="timeline-tag">Remote Work</span>
-              <span class="timeline-tag">Entrepreneurship</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-  </section>
-
-  <!-- ─── CONTACT ─── -->
-  <section class="section contact" id="contact" aria-label="Contact">
-    <div class="container">
-      <div class="contact__layout">
-        <div>
-          <span class="section-label reveal">Let's Talk</span>
-          <h2 class="contact__info-title reveal">
-            Have an idea?<br>
-            <span>Let's build it.</span>
-          </h2>
-          <p class="contact__info-desc reveal">
-            I'm actively looking for Summer 2026 internship opportunities & full-time positions and Open Source contributions.
-            Whether you have a role in mind, want to collaborate, or just want to connect — my inbox is open.
-          </p>
-
-          <div class="contact__links reveal reveal-delay-1">
-            <a href="mailto:chetanambigerchetan@gmail.com" class="contact-link" aria-label="Send email">
-              <span class="contact-link__icon" aria-hidden="true">✉️</span>
-              chetanambigerchetan@gmail.com
-              <span class="contact-link__label">EMAIL</span>
-            </a>
-            <a href="https://linkedin.com/in/chetanambiger" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-              <span class="contact-link__icon" aria-hidden="true">💼</span>
-              linkedin.com/in/chetanambiger
-              <span class="contact-link__label">LINKEDIN</span>
-            </a>
-            <a href="https://github.com/Chetan-AMBI-netizen" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-              <span class="contact-link__icon" aria-hidden="true">⌥</span>
-              github.com/Chetan-AMBI-netizen
-              <span class="contact-link__label">GITHUB</span>
-            </a>
-            <a href="MY_RESUMECV.pdf" class="contact-link" aria-label="Download resume">
-              <span class="contact-link__icon" aria-hidden="true">📄</span>
-              Download Resume
-              <span class="contact-link__label">PDF</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="contact__form reveal reveal-delay-2">
-          <form id="contactForm" novalidate aria-label="Contact form">
-            <div class="form__row">
-              <div class="form__group" id="group-name">
-                <label class="form__label" for="name">Name</label>
-                <input
-                  class="form__input"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  autocomplete="name"
-                  required
-                  aria-required="true"
-                />
-                <div class="form__error-msg" role="alert">Please enter your name</div>
-              </div>
-              <div class="form__group" id="group-email">
-                <label class="form__label" for="email">Email</label>
-                <input
-                  class="form__input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@email.com"
-                  autocomplete="email"
-                  required
-                  aria-required="true"
-                />
-                <div class="form__error-msg" role="alert">Please enter a valid email</div>
-              </div>
-            </div>
-
-            <div class="form__group" id="group-subject">
-              <label class="form__label" for="subject">Subject</label>
-              <input
-                class="form__input"
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="What's this about?"
-                required
-                aria-required="true"
-              />
-              <div class="form__error-msg" role="alert">Please enter a subject</div>
-            </div>
-
-            <div class="form__group" id="group-message">
-              <label class="form__label" for="message">Message</label>
-              <textarea
-                class="form__textarea"
-                id="message"
-                name="message"
-                placeholder="Tell me about your project, idea, or opportunity..."
-                required
-                aria-required="true"
-              ></textarea>
-              <div class="form__error-msg" role="alert">Please write a message (min. 20 characters)</div>
-            </div>
-
-            <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
-              <span class="form__submit-text">Send Message ↗</span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
- 
-  </section>
-
-  <!-- ─── FOOTER ─── -->
-  <footer class="footer" aria-label="Footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">
-          Designed &amp; Built by <span>Chetan Ambiger</span> · © 2026
-        </p>
-        <nav aria-label="Social links">
-          <div class="footer__socials">
-            <a href="https://github.com/Chetan-AMBI-netizen" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <span aria-hidden="true">🐙</span>
-            </a>
-            <a href="https://linkedin.com/in/chetanambiger" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <span aria-hidden="true">💼</span>
-            </a>
-            <a href="mailto:chetanambigerchetan@gmail.com" class="social-btn" aria-label="Email">
-              <span aria-hidden="true">✉️</span>
-            </a>
-            <a href="https://instagram.com/ll_ambi_____ll" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <span aria-hidden="true"> 📱</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ─────────────────────────────────────────
-       JAVASCRIPT
-  ───────────────────────────────────────── -->
-  <script >
-    /* ── Navbar scroll state ── */
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelectorAll('.navbar__link');
-    const sections = document.querySelectorAll('section[id]');
-
-    window.addEventListener('scroll', () => {
-      /* Scrolled style */
-      navbar.classList.toggle('scrolled', window.scrollY > 20);
-
-      /* Active link highlighting */
-      let current = '';
-      sections.forEach(sec => {
-        if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
-      });
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-      });
-    }, { passive: true });
-
-    /* ── Mobile menu ── */
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = mobileMenu.querySelectorAll('.navbar__link');
-
-    hamburger.addEventListener('click', () => {
-      const open = !hamburger.classList.contains('open');
-      hamburger.classList.toggle('open', open);
-      mobileMenu.classList.toggle('open', open);
-      hamburger.setAttribute('aria-expanded', String(open));
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    /* Close menu on outside click */
-    document.addEventListener('click', e => {
-      if (!navbar.contains(e.target)) {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    /* ── Intersection Observer — reveal animations ── */
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    revealEls.forEach(el => observer.observe(el));
-
-    /* ── Form validation ── */
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    function validateField(field, groupId, condition) {
-      const group = document.getElementById(groupId);
-      if (condition) {
-        field.classList.remove('error');
-        field.classList.add('valid');
-        group.classList.remove('has-error');
-        return true;
-      } else {
-        field.classList.add('error');
-        field.classList.remove('valid');
-        group.classList.add('has-error');
-        return false;
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0A0B0F',
+          surface: '#12141C',
+          surface2: '#171A24',
+          hairline: '#22242F',
+          text: {
+            primary: '#E8E9ED',
+            muted: '#8B8D98',
+            faint: '#54566A',
+          },
+          signal: '#F5A623',
+          indigo: '#6366F1',
+          cyan: '#22D3EE',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
       }
     }
+  }
+</script>
 
-    /* Live validation on blur */
-    document.getElementById('name').addEventListener('blur', function() {
-      validateField(this, 'group-name', this.value.trim().length >= 2);
-    });
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-ink text-text-primary font-body antialiased overflow-x-hidden">
 
-    document.getElementById('email').addEventListener('blur', function() {
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      validateField(this, 'group-email', emailRe.test(this.value.trim()));
-    });
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loading-screen">
+  <div class="loader-content">
+    <span class="font-mono text-sm text-text-faint">Chetan_AMBI.sh</span>
+    <div class="loader-bar-track"><div class="loader-bar-fill" id="loader-fill"></div></div>
+    <span class="font-mono text-xs text-text-muted" id="loader-pct">0%</span>
+  </div>
+</div>
 
-    document.getElementById('subject').addEventListener('blur', function() {
-      validateField(this, 'group-subject', this.value.trim().length >= 3);
-    });
+<!-- ============ CURSOR GLOW ============ -->
+<div id="cursor-glow"></div>
 
-    document.getElementById('message').addEventListener('blur', function() {
-      validateField(this, 'group-message', this.value.trim().length >= 20);
-    });
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500">
+  <nav class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
+    <a href="#home" class="flex items-center gap-2 group">
+      <span class="w-2 h-2 rounded-full bg-signal shrink-0 pulse-dot"></span>
+      <span class="font-display font-semibold text-lg tracking-tight">Chetan Ambiger<span class="text-text-muted">.dev</span></span>
+    </a>
 
-    /* Submit */
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
+    <ul class="hidden md:flex items-center gap-1 font-mono text-[13px]">
+      <li><a href="#home" class="nav-link active-nav" data-nav>home</a></li>
+      <li><a href="#about" class="nav-link" data-nav>about</a></li>
+      <li><a href="#skills" class="nav-link" data-nav>skills</a></li>
+      <li><a href="#projects" class="nav-link" data-nav>projects</a></li>
+      <li><a href="#experience" class="nav-link" data-nav>experience</a></li>
+      <li><a href="#achievements" class="nav-link" data-nav>achievements</a></li>
+      <li><a href="#services" class="nav-link" data-nav>services</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>contact</a></li>
+    </ul>
 
-      const name    = document.getElementById('name');
-      const email   = document.getElementById('email');
-      const subject = document.getElementById('subject');
-      const message = document.getElementById('message');
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    <div class="hidden md:flex items-center gap-3">
+      <a href="#contact" class="btn-primary text-[13px] px-4 py-2">Let's talk</a>
+    </div>
 
-      const valid = [
-        validateField(name,    'group-name',    name.value.trim().length >= 2),
-        validateField(email,   'group-email',   emailRe.test(email.value.trim())),
-        validateField(subject, 'group-subject', subject.value.trim().length >= 3),
-        validateField(message, 'group-message', message.value.trim().length >= 20),
-      ].every(Boolean);
+    <button id="menu-toggle" class="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-[5px]" aria-label="Toggle menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </nav>
 
-      if (!valid) return;
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden-menu px-6 pb-6">
+    <ul class="flex flex-col gap-1 font-mono text-sm border-t border-hairline pt-4">
+      <li><a href="#home" class="mobile-nav-link" data-nav>home</a></li>
+      <li><a href="#about" class="mobile-nav-link" data-nav>about</a></li>
+      <li><a href="#skills" class="mobile-nav-link" data-nav>skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link" data-nav>projects</a></li>
+      <li><a href="#experience" class="mobile-nav-link" data-nav>experience</a></li>
+      <li><a href="#achievements" class="mobile-nav-link" data-nav>achievements</a></li>
+      <li><a href="#services" class="mobile-nav-link" data-nav>services</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-nav>contact</a></li>
+    </ul>
+  </div>
+</header>
 
-      /* Simulate send */
-      submitBtn.disabled = true;
-      submitBtn.classList.add('sent');
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+  <!-- ambient gradients -->
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="grid-overlay"></div>
 
-      setTimeout(() => {
-        form.reset();
-        [name, email, subject, message].forEach(f => f.classList.remove('valid', 'error'));
-        submitBtn.disabled = false;
-        submitBtn.classList.remove('sent');
-      }, 3500);
-    });
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.15fr_1fr] gap-16 items-center relative z-10 w-full">
 
-    /* ── Smooth scroll polyfill for older Safari ── */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  </script>
+    <!-- Left: headline -->
+    <div class="reveal-up">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-hairline bg-surface/60 backdrop-blur mb-7 font-mono text-xs text-text-muted">
+        <span class="w-1.5 h-1.5 rounded-full bg-signal pulse-dot"></span>
+        available for Internships & Open-Source Contribution-- 2026
+      </div>
 
+      <h1 class="font-display font-semibold text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.2rem] tracking-tight mb-6">
+        Engineering
+        <span class="block gradient-text">intelligent systems</span>
+        that ship.
+      </h1>
+
+      <p class="text-text-muted text-lg leading-relaxed max-w-xl mb-9">
+       I'm a 2nd year Computer Science student at VEMANA INSTITUTE OF TECHNOLOGY BANGALORE
+      </p>
+
+      <div class="flex flex-wrap items-center gap-4 mb-12">
+        <a href="MY_RESUMECV.pdf" class="btn-primary ripple">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          Download resume
+        </a>
+        <a href="#contact" class="btn-ghost ripple">Contact me</a>
+        <div class="flex items-center gap-2 ml-1">
+          <a href="https://github.com/Chetan-AMBI-netizen" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.83 2.8 1.31 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.84.57A12 12 0 0012 .3"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/chetan-ambiger-b6ba42380?utm_" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 11.02-4.12 2.06 2.06 0 01-.02 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-10 font-mono">
+        <div><span class="counter text-2xl font-semibold text-text-primary" data-target="6">1.4</span><span class="text-2xl font-semibold">+</span><p class="text-xs text-text-muted mt-1">years building</p></div>
+        <div><span class="counter text-2xl font-semibold text-text-primary" data-target="27">4+</span><p class="text-xs text-text-muted mt-1">projects shipped</p></div>
+        <div><span class="counter text-2xl font-semibold text-text-primary" data-target="4">1</span><p class="text-xs text-text-muted mt-1">products founded</p></div>
+      </div>
+    </div>
+
+    <!-- Right: terminal signature element -->
+    <div class="reveal-up delay-2">
+      <div class="terminal-window">
+        <div class="terminal-topbar">
+          <span class="dot" style="background:#FF5F57"></span>
+          <span class="dot" style="background:#FEBC2E"></span>
+          <span class="dot" style="background:#28C840"></span>
+          <span class="font-mono text-xs text-text-faint ml-2">Chetan@system — zsh</span>
+        </div>
+        <div class="terminal-body font-mono text-[13px] leading-relaxed" id="terminal-body">
+          <!-- typed via JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scroll-indicator reveal-up delay-3">
+    <span class="font-mono text-[11px] text-text-faint">scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section-pad relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 01 · about</p>
+    <h2 class="section-title reveal-up">The person behind the systems.</h2>
+
+    <div class="grid lg:grid-cols-2 gap-16 mt-14">
+      <div class="reveal-up delay-1">
+        <p class="text-text-muted leading-relaxed mb-5">
+         I'm a 1st year Computer Science student at VEMANA INSTITUTE OF TECHNOLOGY BANGALORE with a deep love for software that's both functional and beautiful.
+          I believe great engineering is invisible — it just works.
+        </p>
+        <p class="text-text-muted leading-relaxed mb-5">
+          My experience spans the Frontend: building React frontends that delight users, designing RESTful APIs that developers love, and deploying cloud infrastructure that scales.
+           I'm particularly drawn to the intersection of performance, design, and developer experience.
+        </p>
+        <p class="text-text-muted leading-relaxed">
+          When I'm not coding, you'll find me contributing to open source,
+           writing technical articles, or exploring the Bangalore hills
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 mt-9">
+          <div class="glass-card p-5">
+            <p class="font-mono text-xs text-text-faint mb-1">education</p>
+            <p class="font-display font-medium">B.Tech, Computer Science</p>
+            <p class="text-sm text-text-muted">VIT BANGALORE -2029</p>
+          </div>
+          <div class="glass-card p-5">
+            <p class="font-mono text-xs text-text-faint mb-1">based in</p>
+            <p class="font-display font-medium">Bengaluru, India</p>
+            <p class="text-sm text-text-muted">working with teams</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="reveal-up delay-2">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <p class="font-mono text-xs text-text-faint mb-1">2026 — present</p>
+            <h3 class="font-display font-medium text-lg mb-1">Founder & CEO, CareerForge(working on)</h3>
+            <p class="text-text-muted text-sm"> Building an AI-powered Student Operating System to help students learn, grow, and build successful careers.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <p class="font-mono text-xs text-text-faint mb-1">2025-2026</p>
+            <h3 class="font-display font-medium text-lg mb-1">Team-Lead Enterprenure, VEXON PVT Ltd</h3>
+            <p class="text-text-muted text-sm"> The role not just managing  performance,
+               but also providing training and support to help team members succed in their enterprenure journey </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <p class="font-mono text-xs text-text-faint mb-1">2026 — 2029</p>
+            <h3 class="font-display font-medium text-lg mb-1">CSE Student, VEMANA IT Bangalore</h3>
+            <p class="text-text-muted text-sm">Pursuing a B.TECH Computer Science and Engineering. includes Data Structures,Algorithms,Operating Systems,and Database Management.
+               Actively Focusing on DSA problems and Problem-Solving</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <p class="font-mono text-xs text-text-faint mb-1">2024-2026</p>
+            <h3 class="font-display font-medium text-lg mb-1">Pre-University, PCMB</h3>
+            <p class="text-text-muted text-sm">EXPERT PU COLLEGE, Vijayapur — Secured with First Class and Distinction(93.00%)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section-pad relative bg-surface/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 02 · skills</p>
+    <h2 class="section-title reveal-up">Tools I reach for.</h2>
+    <p class="text-text-muted max-w-xl mt-4 reveal-up delay-1">A working set, not an exhaustive list — the stack I actually use to take systems from idea to production.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+
+      <div class="skill-card reveal-up delay-1">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.4 16.6L4.8 12l4.6-4.6M14.6 7.4l4.6 4.6-4.6 4.6"/></svg></div>
+        <h3 class="font-display font-medium mb-2">Languages</h3>
+        <p class="text-text-muted text-sm mb-4">Core languages across Frontend Development and product work.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">javaScript</span><span class="tag"> JAVA</span><span class="tag">C/C++</span>
+        </div>
+      </div>
+
+      
+
+      <div class="skill-card reveal-up delay-3">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3 class="font-display font-medium mb-2">Frontend</h3>
+        <p class="text-text-muted text-sm mb-4">Interfaces for complex, model-driven products.</p>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">Next.js</span><span class="tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up delay-4">
+        <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7l8-4 8 4M4 7v10l8 4M4 7l8 4m8-4v10l-8 4m8-14l-8 4m0 10V11"/></svg></div>
+        <h3 class="font-display font-medium mb-2">Infra & Tools</h3>
+        <p class="text-text-muted text-sm mb-4">Shipping and running systems reliably.</p>
+        <div class="tag-row">
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">VSCODE</span><span class="tag">Terraform</span> <span class = "tag"> Git & Github</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section-pad relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 03 · projects</p>
+    <h2 class="section-title reveal-up">Selected work.</h2>
+    <p class="text-text-muted max-w-xl mt-4 reveal-up delay-1">A few systems and products I've designed, built, and shipped end to end.</p>
+
+    <div class="grid md:grid-cols-2 gap-7 mt-14">
+
+      <article class="project-card reveal-up delay-1">
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a1c3a,#12141c 60%);">
+          <svg class="w-full h-full opacity-80" viewBox="0 0 400 240" preserveAspectRatio="none">
+            <defs><linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs>
+            <path d="M0 180 Q80 100 160 150 T400 90" stroke="url(#pg1)" stroke-width="2" fill="none" opacity="0.7"/>
+            <path d="M0 210 Q100 160 200 190 T400 140" stroke="url(#pg1)" stroke-width="1.5" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-display font-semibold text-xl">CAREFLOW-AI-Healthcare Workflow<br> Automation</h3>
+            <span class="font-mono text-[11px] text-signal">Hackathon</span>
+          </div>
+          <p class="text-text-muted text-sm mb-4 leading-relaxed">Infrastructure for reliable retrieval-augmented generation — grounding, evaluation, and observability for enterprise LLM applications.</p>
+          <div class="tag-row mb-5">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Javascript</span><span class="tag">postgreSQL</span> <span class = "tag"> Firebase</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="btn-mini">GitHub</a>
+            <a href="https://github.com/Epoch26/AI-128-GAME-IS-ON" class="btn-mini btn-mini-solid">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+    <!-- <article class="project-card reveal-up delay-2">
+        <div class="project-preview" style="background:linear-gradient(135deg,#1c1a2e,#12141c 60%);">
+          <svg class="w-full h-full opacity-80" viewBox="0 0 400 240">
+            <rect x="40" y="40" width="120" height="14" rx="7" fill="#22D3EE" opacity="0.5"/>
+            <rect x="40" y="70" width="200" height="10" rx="5" fill="#6366F1" opacity="0.4"/>
+            <rect x="40" y="92" width="160" height="10" rx="5" fill="#6366F1" opacity="0.3"/>
+            <rect x="40" y="130" width="90" height="60" rx="8" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-display font-semibold text-xl">CodeSensei AI</h3>
+            <span class="font-mono text-[11px] text-text-faint">product</span>
+          </div>
+          <p class="text-text-muted text-sm mb-4 leading-relaxed">An AI pair-programmer that reviews pull requests against a team's own conventions, not generic style guides.</p>
+          <div class="tag-row mb-5">
+            <span class="tag">TypeScript</span><span class="tag">Claude API</span><span class="tag">GitHub Actions</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="#" class="btn-mini">GitHub</a>
+            <a href="#" class="btn-mini btn-mini-solid">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal-up delay-3">
+        <div class="project-preview" style="background:linear-gradient(135deg,#1a2130,#12141c 60%);">
+          <svg class="w-full h-full opacity-80" viewBox="0 0 400 240">
+            <rect x="40" y="140" width="30" height="60" fill="#6366F1" opacity="0.5"/>
+            <rect x="85" y="100" width="30" height="100" fill="#22D3EE" opacity="0.5"/>
+            <rect x="130" y="70" width="30" height="130" fill="#6366F1" opacity="0.6"/>
+            <rect x="175" y="120" width="30" height="80" fill="#22D3EE" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-display font-semibold text-xl">PulseMetrics</h3>
+            <span class="font-mono text-[11px] text-text-faint">product</span>
+          </div>
+          <p class="text-text-muted text-sm mb-4 leading-relaxed">Real-time analytics for model performance drift — alerts teams before quality issues reach users.</p>
+          <div class="tag-row mb-5">
+            <span class="tag">Go</span><span class="tag">ClickHouse</span><span class="tag">React</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="#" class="btn-mini">GitHub</a>
+            <a href="#" class="btn-mini btn-mini-solid">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal-up delay-4">
+        <div class="project-preview" style="background:linear-gradient(135deg,#211a30,#12141c 60%);">
+          <svg class="w-full h-full opacity-80" viewBox="0 0 400 240">
+            <circle cx="200" cy="120" r="55" fill="none" stroke="#6366F1" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="200" cy="120" r="35" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="200" cy="120" r="4" fill="#F5A623"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-display font-semibold text-xl">Vantage OS</h3>
+            <span class="font-mono text-[11px] text-text-faint">side project</span>
+          </div>
+          <p class="text-text-muted text-sm mb-4 leading-relaxed">A personal AI operating layer that routes tasks across local and hosted models based on cost and latency.</p>
+          <div class="tag-row mb-5">
+            <span class="tag">Rust</span><span class="tag">WASM</span><span class="tag">Ollama</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="#" class="btn-mini">GitHub</a>
+            <a href="#" class="btn-mini btn-mini-solid">Live demo</a>
+          </div>
+        </div>
+      </article> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE / EDUCATION (secondary detail table) ============ -->
+<section id="experience" class="section-pad relative bg-surface/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 04 · experience</p>
+    <h2 class="section-title reveal-up">Where the work has lived.</h2>
+
+    <div class="mt-14 divide-y divide-hairline border-t border-b border-hairline reveal-up delay-1">
+      <div class="exp-row">
+        <span class="font-mono text-xs text-text-faint">2026 — present</span>
+        <div><h3 class="font-display font-medium text-lg">Founder & CEO</h3><p class="text-text-muted text-sm">CAREERFORGE</p></div>
+        <p class="text-text-muted text-sm hidden md:block">Enterprise RAG infrastructure, from zero to first paying customers.</p>
+      </div>
+      <div class="exp-row">
+        <span class="font-mono text-xs text-text-faint">2025-2026</span>
+        <div><h3 class="font-display font-medium text-lg">Team-Lead Enterprenure</h3><p class="text-text-muted text-sm">VEXON PVT Ltd</p></div>
+        <p class="text-text-muted text-sm hidden md:block">Outstanding performance.</p>
+      </div>
+      <!--
+      <div class="exp-row">
+        <span class="font-mono text-xs text-text-faint">2019 — 2022</span>
+        <div><h3 class="font-display font-medium text-lg">Software Engineer</h3><p class="text-text-muted text-sm">Cognivia</p></div>
+        <p class="text-text-muted text-sm hidden md:block">Built recommendation systems serving 2M+ monthly active users.</p>
+      </div>
+      <div class="exp-row">
+        <span class="font-mono text-xs text-text-faint">2015 — 2019</span>
+        <div><h3 class="font-display font-medium text-lg">B.Tech, Computer Science</h3><p class="text-text-muted text-sm">IIIT Bangalore</p></div>
+        <p class="text-text-muted text-sm hidden md:block">Specialization in machine learning and distributed systems.</p>
+      </div>
+    </div>
+  </div> 
+-->
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="section-pad relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 05 · achievements</p>
+    <h2 class="section-title reveal-up">Numbers and recognition.</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      <div class="stat-card reveal-up delay-1">
+        <span class="counter font-display text-4xl font-semibold gradient-text" data-target="27">4</span>
+        <p class="text-text-muted text-sm mt-2">Projects shipped</p>
+      </div>
+      <div class="stat-card reveal-up delay-2">
+        <span class="counter font-display text-4xl font-semibold gradient-text" data-target="12">0</span>
+        <p class="text-text-muted text-sm mt-2">Enterprise clients</p>
+      </div>
+      <div class="stat-card reveal-up delay-3">
+        <span class="counter font-display text-4xl font-semibold gradient-text" data-target="4200">7</span>
+        <p class="text-text-muted text-sm mt-2">GitHub stars</p>
+      </div>
+      <div class="stat-card reveal-up delay-4">
+        <span class="counter font-display text-4xl font-semibold gradient-text" data-target="6">1.5 +</span>
+        <p class="text-text-muted text-sm mt-2">Years of experience</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="glass-card p-6 reveal-up delay-1">
+        <div class="w-10 h-10 rounded-lg bg-indigo/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-indigo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.9 6.3 6.9.9-5 4.8 1.3 6.8L12 17.3 5.9 20.8l1.3-6.8-5-4.8 6.9-.9z"/></svg>
+        </div>
+        <h3 class="font-display font-medium mb-1">Top 30 AI Builders</h3>
+        <p class="text-text-muted text-sm">BENGAKURU TECH SUMMIT  India, 2025.</p>
+      </div>
+      <div class="glass-card p-6 reveal-up delay-2">
+        <div class="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-cyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3 class="font-display font-medium mb-1">Certified by Infosys-Springboard</h3>
+        <p class="text-text-muted text-sm">Advanced  programmer and developer certification, 2026.</p>
+      </div>
+      <div class="glass-card p-6 reveal-up delay-3">
+        <div class="w-10 h-10 rounded-lg bg-signal/10 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5 text-signal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v8M8 12h8"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3 class="font-display font-medium mb-1">Speaker, VEXON </h3>
+        <p class="text-text-muted text-sm">"Direct Selling Business, Goa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="section-pad relative bg-surface/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 06 · services</p>
+    <h2 class="section-title reveal-up">How I can help.</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <div class="service-card reveal-up delay-1">
+        <span class="font-mono text-xs text-text-faint">01</span>
+        <h3 class="font-display font-medium text-lg mt-3 mb-2">Direct Selling Business Working</h3>
+        <p class="text-text-muted text-sm leading-relaxed"> How the Direct sellers  vision growth</p>
+      </div>
+      <div class="service-card reveal-up delay-2">
+        <span class="font-mono text-xs text-text-faint">02</span>
+        <h3 class="font-display font-medium text-lg mt-3 mb-2">Frontend Development</h3>
+        <p class="text-text-muted text-sm leading-relaxed">End-to-end build of Frontend-powered Stacks, from prototype to a scaled, monitored production system.</p>
+      </div>
+      <div class="service-card reveal-up delay-3">
+        <span class="font-mono text-xs text-text-faint">03</span>
+        <h3 class="font-display font-medium text-lg mt-3 mb-2">Technical Discussing</h3>
+        <p class="text-text-muted text-sm leading-relaxed">Ongoing advisory for founders navigating AI infrastructure, hiring, and technical roadmap decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section-pad relative bg-surface/40">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="section-tag reveal-up">// 08 · contact</p>
+    <h2 class="section-title reveal-up">Let's build something.</h2>
+    <p class="text-text-muted max-w-xl mt-4 reveal-up delay-1">Have a project in mind, or just want to talk shop about AI infrastructure? My inbox is open.</p>
+
+    <div class="grid lg:grid-cols-[1fr_1.2fr] gap-12 mt-14">
+      <div class="reveal-up delay-1">
+        <div class="space-y-5">
+          <div class="contact-info-row">
+            <span class="font-mono text-xs text-text-faint w-20">email</span>
+            <a href="mailto:hello@chetanambiger0@gmail.com" class="hover:text-cyan transition-colors">hello@chetanambiger0@gmail.com</a>
+          </div>
+          <div class="contact-info-row">
+            <span class="font-mono text-xs text-text-faint w-20">location</span>
+            <span>Bengaluru, India (remote-friendly)</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="font-mono text-xs text-text-faint w-20">social</span>
+            <div class="flex gap-3">
+              <a href="https://github.com/Chetan-AMBI-netizen" target="_blank" rel="noopener" class="icon-btn"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.1.83-.26.83-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.76-1.34-1.76-1.1-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.83 2.8 1.31 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.84.57A12 12 0 0012 .3"/></svg></a>
+              <a href="https://linkedin.com/in/chetan-ambiger-b6ba42380?utm_" target="_blank" rel="noopener" class="icon-btn"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 11.02-4.12 2.06 2.06 0 01-.02 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+              <a href="https://x.com/chetanambi123" target="_blank" rel="noopener" class="icon-btn"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.2 22H2l7.7-8.8L1.3 2H8l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 4H5.5l12.2 16z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 mt-10">
+          <p class="font-mono text-xs text-text-faint mb-2">// response time</p>
+          <p class="text-text-muted text-sm">I read every message and typically reply within 1–2 business days.</p>
+        </div>
+      </div>
+
+      <form id="contact-form" class="reveal-up delay-2 glass-card p-8">
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" required class="form-input" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" required class="form-input" placeholder="you@company.com">
+          </div>
+        </div>
+        <div class="form-group mb-5">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" required class="form-input" placeholder="What's this about?">
+        </div>
+        <div class="form-group mb-6">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="5" required class="form-input resize-none" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full justify-center ripple" id="submit-btn">
+          <span id="submit-text">Send message</span>
+        </button>
+        <p id="form-success" class="text-center text-sm text-cyan mt-4 hidden">Message sent — I'll get back to you soon.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-hairline pt-16 pb-8 relative">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-4 gap-10 mb-14">
+      <div class="md:col-span-2">
+        <a href="#home" class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-signal"></span>
+          <span class="font-display font-semibold text-lg">Chetan<span class="text-text-muted">.dev</span></span>
+        </a>
+        <p class="text-text-muted text-sm max-w-sm leading-relaxed">Frontend Developer, Future Engineer, and Founder building intelligent systems that ship — from model to production.</p>
+      </div>
+      <div>
+        <p class="font-mono text-xs text-text-faint mb-4">navigate</p>
+        <ul class="space-y-2 text-sm text-text-muted">
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#projects" class="footer-link">Projects</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-mono text-xs text-text-faint mb-4">elsewhere</p>
+        <ul class="space-y-2 text-sm text-text-muted">
+          <li><a href="https://github.com/Chetan-AMBI-netizen" target="_blank" rel="noopener" class="footer-link">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/chetan-ambiger-b6ba42380?utm_" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+          <li><a href="https://x.com/chetanambi123" target="_blank" rel="noopener" class="footer-link">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-hairline">
+      <p class="text-text-faint text-xs font-mono">© 2026 Chetan Ambiger. All rights reserved.</p>
+      <p class="text-text-faint text-xs font-mono">designed & built with intent, not templates.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
