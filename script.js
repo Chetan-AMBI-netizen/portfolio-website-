@@ -1,287 +1,202 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* =========================================================
+   Loading screen
+   ========================================================= */
+(function () {
+  const fill = document.getElementById('loader-fill');
+  const pct  = document.getElementById('loader-pct');
+  const screen = document.getElementById('loading-screen');
+  let p = 0;
+  const iv = setInterval(() => {
+    p += Math.random() * 18;
+    if (p >= 100) { p = 100; clearInterval(iv); setTimeout(() => screen.classList.add('loaded'), 300); }
+    fill.style.width = p + '%';
+    pct.textContent  = Math.floor(p) + '%';
+  }, 120);
+})();
 
-  /* =========================================================
-     1. Loading screen
-  ========================================================= */
-  const loadingScreen = document.getElementById('loading-screen');
-  const loaderFill = document.getElementById('loader-fill');
-  const loaderPct = document.getElementById('loader-pct');
+/* =========================================================
+   Cursor glow
+   ========================================================= */
+const glow = document.getElementById('cursor-glow');
+document.addEventListener('mousemove', e => {
+  glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+});
 
-  (function runLoader() {
-    let progress = 0;
-    const duration = 1100; // ms
-    const start = performance.now();
+/* =========================================================
+   Navbar scroll state
+   ========================================================= */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
+});
 
-    function tick(now) {
-      const elapsed = now - start;
-      progress = Math.min(100, Math.round((elapsed / duration) * 100));
-      loaderFill.style.width = progress + '%';
-      loaderPct.textContent = progress + '%';
-      if (progress < 100) {
-        requestAnimationFrame(tick);
-      } else {
-        setTimeout(() => {
-          loadingScreen.classList.add('loaded');
-          startTerminalBoot();
-          revealOnLoad();
-        }, 150);
-      }
+/* =========================================================
+   Mobile menu
+   ========================================================= */
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+menuToggle.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  menuToggle.classList.toggle('open', open);
+});
+
+/* =========================================================
+   Active nav link on scroll
+   ========================================================= */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('[data-nav]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => {
+        const isMatch = l.getAttribute('href') === '#' + e.target.id;
+        l.classList.toggle('active-nav', isMatch);
+      });
     }
-    requestAnimationFrame(tick);
-  })();
-
-  /* =========================================================
-     2. Terminal typing effect (signature hero element)
-  ========================================================= */
-  const terminalBody = document.getElementById('terminal-body');
-
-  const bootLines = [
-    { text: '$ whoami', cls: 'prompt', pause: 250 },
-    { text: 'Chetan Ambiger — Frontend Developer / founder', cls: '', pause: 350 },
-    { text: '$ status --check', cls: 'prompt', pause: 250 },
-    { text: '✓ models: serving', cls: 'success', pause: 120 },
-    { text: '✓ infra: stable', cls: 'success', pause: 120 },
-    { text: '✓ availability: open for  industrial Opportunites', cls: 'success', pause: 350 },
-    { text: '$ cat focus.txt', cls: 'prompt', pause: 250 },
-    { text: '// building reliable AI systems, end to end', cls: 'comment', pause: 0 },
-  ];
-
-  let terminalStarted = false;
-
-  function startTerminalBoot() {
-    if (terminalStarted || !terminalBody) return;
-    terminalStarted = true;
-    typeLine(0);
-  }
-
-  function typeLine(lineIndex) {
-    if (lineIndex >= bootLines.length) {
-      const cursor = document.createElement('span');
-      cursor.className = 'terminal-cursor';
-      terminalBody.appendChild(cursor);
-      return;
-    }
-    const line = bootLines[lineIndex];
-    const lineEl = document.createElement('div');
-    if (line.cls) lineEl.className = line.cls;
-    terminalBody.appendChild(lineEl);
-
-    let charIndex = 0;
-    const speed = line.cls === 'prompt' ? 38 : 14;
-
-    function typeChar() {
-      if (charIndex < line.text.length) {
-        lineEl.textContent += line.text.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeChar, speed);
-      } else {
-        setTimeout(() => typeLine(lineIndex + 1), line.pause);
-      }
-    }
-    typeChar();
-  }
-
-  /* =========================================================
-     3. Scroll reveal (IntersectionObserver)
-  ========================================================= */
-  const revealEls = document.querySelectorAll('.reveal-up');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-  revealEls.forEach((el) => revealObserver.observe(el));
-
-  function revealOnLoad() {
-    // Reveal anything already in the hero viewport immediately after loader clears
-    const heroReveals = document.querySelectorAll('#home .reveal-up');
-    heroReveals.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        el.classList.add('in-view');
-      }
-    });
-  }
-
-  /* =========================================================
-     4. Navbar: scroll state + active link highlight
-  ========================================================= */
-  const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('[data-nav]');
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-
-  function onScroll() {
-    // navbar background
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-
-    // active section detection
-    let currentId = sections[0] ? sections[0].id : '';
-    const scrollPos = window.scrollY + 140;
-    sections.forEach((section) => {
-      if (scrollPos >= section.offsetTop) {
-        currentId = section.id;
-      }
-    });
-    navLinks.forEach((link) => {
-      const isActive = link.getAttribute('href') === '#' + currentId;
-      link.classList.toggle('active-nav', isActive);
-    });
-
-    // back to top visibility
-    if (window.scrollY > 600) {
-      backToTop.classList.add('visible');
-    } else {
-      backToTop.classList.remove('visible');
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* =========================================================
-     5. Mobile menu
-  ========================================================= */
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    mobileMenu.classList.toggle('hidden-menu');
   });
+}, { threshold: 0.35 });
+sections.forEach(s => observer.observe(s));
 
-  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      mobileMenu.classList.add('hidden-menu');
-    });
-  });
+/* =========================================================
+   Scroll reveal
+   ========================================================= */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal-up').forEach(el => revealObs.observe(el));
 
-  /* =========================================================
-     6. Smooth scroll for in-page anchors
-  ========================================================= */
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      const targetId = anchor.getAttribute('href');
-      if (targetId.length > 1) {
-        const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          const offset = 72;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      }
-    });
-  });
+/* =========================================================
+   Terminal typewriter
+   ========================================================= */
+const lines = [
+  { type: 'prompt',  text: '❯ whoami' },
+  { type: 'output',  text: 'Chetan Ambiger' },
+  { type: 'prompt',  text: '❯ cat role.txt' },
+  { type: 'success', text: 'CSE Student · Founder · Frontend Dev' },
+  { type: 'prompt',  text: '❯ cat stack.json' },
+  { type: 'output',  text: '{ "frontend": "React / Next.js", "lang": "Python · JS · Java" }' },
+  { type: 'prompt',  text: '❯ cat status.txt' },
+  { type: 'success', text: '✓ open to internships & open-source' },
+  { type: 'comment', text: '// building CareerForge — the student OS' },
+];
 
-  /* =========================================================
-     7. Animated counters
-  ========================================================= */
-  const counters = document.querySelectorAll('.counter');
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach((c) => counterObserver.observe(c));
+const termBody = document.getElementById('terminal-body');
+let lineIdx = 0, charIdx = 0;
+let currentEl = null;
 
-  function animateCounter(el) {
-    const target = parseInt(el.getAttribute('data-target'), 10) || 0;
-    const duration = 1400;
-    const start = performance.now();
-
-    function step(now) {
-      const progress = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-      const value = Math.round(eased * target);
-      el.textContent = value.toLocaleString();
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target.toLocaleString();
-      }
-    }
-    requestAnimationFrame(step);
+function typeNext() {
+  if (lineIdx >= lines.length) {
+    const cursor = document.createElement('span');
+    cursor.className = 'terminal-cursor';
+    termBody.appendChild(cursor);
+    return;
   }
-
-  /* =========================================================
-     8. Cursor glow (desktop only)
-  ========================================================= */
-  const cursorGlow = document.getElementById('cursor-glow');
-  if (window.matchMedia('(hover: hover) and (min-width: 1024px)').matches) {
-    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-    function animateGlow() {
-      glowX += (mouseX - glowX) * 0.12;
-      glowY += (mouseY - glowY) * 0.12;
-      cursorGlow.style.transform = `translate(${glowX}px, ${glowY}px)`;
-      requestAnimationFrame(animateGlow);
-    }
-    animateGlow();
+  const line = lines[lineIdx];
+  if (charIdx === 0) {
+    currentEl = document.createElement('div');
+    currentEl.className = line.type === 'prompt'  ? 'prompt'
+                        : line.type === 'success' ? 'success'
+                        : line.type === 'comment' ? 'comment'
+                        : '';
+    termBody.appendChild(currentEl);
   }
+  currentEl.textContent += line.text[charIdx];
+  charIdx++;
+  if (charIdx < line.text.length) {
+    setTimeout(typeNext, 28);
+  } else {
+    charIdx = 0;
+    lineIdx++;
+    setTimeout(typeNext, lineIdx % 2 === 0 ? 380 : 180);
+  }
+}
+setTimeout(typeNext, 1400);
 
-  /* =========================================================
-     9. Ripple button effect
-  ========================================================= */
-  document.querySelectorAll('.ripple').forEach((btn) => {
-    btn.addEventListener('click', function (e) {
-      const rect = btn.getBoundingClientRect();
-      const ripple = document.createElement('span');
-      const size = Math.max(rect.width, rect.height);
-      ripple.className = 'ripple-effect';
-      ripple.style.width = ripple.style.height = size + 'px';
-      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-      btn.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 650);
-    });
+/* =========================================================
+   Ripple effect on buttons
+   ========================================================= */
+document.querySelectorAll('.ripple').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    const r = document.createElement('span');
+    r.className = 'ripple-effect';
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size/2}px;top:${e.clientY - rect.top - size/2}px`;
+    this.appendChild(r);
+    r.addEventListener('animationend', () => r.remove());
   });
+});
 
-  /* =========================================================
-     10. Back to top button
-  ========================================================= */
-  const backToTop = document.getElementById('back-to-top');
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+/* =========================================================
+   GitHub — fallback handlers if APIs fail
+   ========================================================= */
+function fallbackContribGraph() {
+  const img = document.getElementById('contrib-graph-img');
+  if (!img || img.dataset.tried) return;
+  img.dataset.tried = '1';
+  // Try alternate service
+  img.src = 'https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Chetan-AMBI-netizen&theme=github_dark';
+  img.onerror = () => {
+    img.closest('.github-graph-wrap').innerHTML =
+      '<p class="font-mono text-xs text-text-faint p-6 text-center">Graph unavailable. <a href="https://github.com/Chetan-AMBI-netizen" target="_blank" class="text-cyan underline">View on GitHub →</a></p>';
+    checkAllFailed();
+  };
+}
+
+function fallbackHeatmap() {
+  const img = document.getElementById('heatmap-img');
+  if (!img || img.dataset.tried) return;
+  img.dataset.tried = '1';
+  // Try different color variant
+  img.src = 'https://ghchart.rshah.org/26a641/Chetan-AMBI-netizen';
+  img.onerror = () => {
+    img.closest('.github-graph-wrap').innerHTML =
+      '<p class="font-mono text-xs text-text-faint p-6 text-center">Heatmap unavailable. <a href="https://github.com/Chetan-AMBI-netizen" target="_blank" class="text-cyan underline">View on GitHub →</a></p>';
+    checkAllFailed();
+  };
+}
+
+function checkAllFailed() {
+  const g1 = document.getElementById('contrib-graph-img');
+  const g2 = document.getElementById('heatmap-img');
+  if ((!g1 || g1.dataset.tried) && (!g2 || g2.dataset.tried)) {
+    const fb = document.getElementById('github-fallback');
+    if (fb) fb.style.display = 'block';
+  }
+}
+
+/* =========================================================
+   Back to top
+   ========================================================= */
+document.getElementById('back-to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* =========================================================
+   Contact form (placeholder — wire up your backend/Formspree)
+   ========================================================= */
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const btn  = document.getElementById('submit-btn');
+  const text = document.getElementById('submit-text');
+  const success = document.getElementById('form-success');
+  btn.disabled = true;
+  text.textContent = 'Sending…';
+  // Simulate send — replace with fetch() to Formspree / your API
+  setTimeout(() => {
+    text.textContent = 'Send message';
+    btn.disabled = false;
+    success.classList.remove('hidden');
+    this.reset();
+    setTimeout(() => success.classList.add('hidden'), 5000);
+  }, 1500);
+});
+
+/* =========================================================
+   Mobile nav: close menu on link click
+   ========================================================= */
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuToggle.classList.remove('open');
   });
-
-  /* =========================================================
-     11. Contact form (frontend only, no backend)
-  ========================================================= */
-  const contactForm = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const submitText = document.getElementById('submit-text');
-  const formSuccess = document.getElementById('form-success');
-
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    submitText.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
-
-    setTimeout(() => {
-      submitText.textContent = 'Send message';
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = '1';
-      formSuccess.classList.remove('hidden');
-      contactForm.reset();
-      setTimeout(() => formSuccess.classList.add('hidden'), 4000);
-    }, 900);
-  });
-
 });
